@@ -1,0 +1,45 @@
+/* Start General Edits  */
+* {
+    font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/* End General Edits  */
+
+/* Start Variables */
+:root {
+    --decoration-color: #1A93FA 
+}
+/* End Variables */
+
+/* Start Header  */
+header {   
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+header h1{
+    margin: 0 0 0 200px;
+    font-size: 30px;
+    letter-spacing: .5px;
+    color: var(--decoration-color);
+}
+
+header ul{
+    display: flex;
+    margin: 0 200px 0 0;
+}
+
+header ul li{
+    display: block;
+    padding: 0 40px;
+    font-size: 18px;;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: #000;
+}
+/* End Header  */
