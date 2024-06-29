@@ -11,7 +11,8 @@ body {
 
 /* Start Variables */
 :root {
-    --decoration-color: #1A93FA 
+    --decoration-color: #1A93FA;
+    --main-transition-duration: .3s;
 }
 /* End Variables */
 
@@ -43,7 +44,8 @@ body {
 
 /* Start Header  */
 header {
-    padding: 30px 0;
+    padding: 10px 0;
+    box-shadow: 0 0 10px #Ddd;;
 }
 
 header .container {
@@ -69,13 +71,14 @@ header .main-links{
 }
 
 header .main-links > li{
-    padding: 15px 30px;
+    padding: 0 30px; /* i remove the padding left and right and replace it with height */
+    height: 60px; /* this is better if you change the font later and in the same time conserve the height of the header*/
     display: block;
     font-size: 18px;
     position: relative;
     margin-left: 10px;
     text-align: center;
-    transition: .2s linear;
+    transition: calc(var(--main-transition-duration) - .1s) linear;
     display: flex;
     align-items: center;
     font-size: 16px;
@@ -101,7 +104,7 @@ header .main-links > li::before {
     top: 0;
     background-color: #f7f7f7;
     border-top: 3px solid var(--decoration-color);
-    transition: .2s linear;
+    transition: calc(var(--main-transition-duration) - .1s) linear;
     z-index: -1;
 }
 
@@ -121,13 +124,12 @@ header .container .main-links .other-links {
     visibility: hidden;
     position: absolute;
     left: 0;
-    top: 70px;
+    top: 140px;
     grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
     padding: 20px 0;
     gap: 30px;
-    transition: .3s;
+    transition: var(--main-transition-duration);
     border-bottom: 3px solid var(--decoration-color);
-    margin-top: 50px;
 }
 @media (max-width:991px) {
     header .container .main-links .other-links {
@@ -136,11 +138,11 @@ header .container .main-links .other-links {
 }
 header .container .main-links .other-links:hover {
     visibility: visible;
-    top: 50px;
+    top: 120px;
 }
 header .container .main-links li:last-of-type:hover + div.other-links {
     visibility: visible;
-    top: 50px;
+    top: 120px;
 }
 header .container .main-links .other-links  img {
     max-width: 350px;
@@ -166,7 +168,7 @@ header .container .main-links .other-links  ul li::before {
     top: 0;
     background-color: #f7f7f7;
     z-index: -1;
-    transition: .3s linear;
+    transition: var(--main-transition-duration) linear;
 }
 header .container .main-links .other-links  ul li:hover::before {
     width: 100%;
