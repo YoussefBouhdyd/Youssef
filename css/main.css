@@ -1,9 +1,11 @@
 /* Start General Edits  */
 * {
-    font-family:'Open Sans', 'Helvetica Neue', sans-serif;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+body {
+    font-family:'Open Sans', 'Helvetica Neue', sans-serif;
 }
 /* End General Edits  */
 
@@ -13,33 +15,173 @@
 }
 /* End Variables */
 
+/* Start Container  */
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small Screan  */
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium Screan  */
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Container  */
+
 /* Start Header  */
-header {   
+header {
+    padding: 30px 0;
+}
+
+header .container {
     display: flex;
     justify-content: space-between;
-    padding: 30px;
+    align-items: center;
+    position: relative;
+}
+@media (max-width:767px) {
+    header .container {
+        flex-direction: column;
+    }
 }
 
 header h1{
-    margin: 0 0 0 200px;
     font-size: 30px;
     letter-spacing: .5px;
     color: var(--decoration-color);
 }
 
-header ul{
+header .main-links{
     display: flex;
-    margin: 0 200px 0 0;
 }
 
-header ul li{
+header .main-links > li{
+    padding: 15px 30px;
     display: block;
-    padding: 0 40px;
-    font-size: 18px;;
+    font-size: 18px;
+    position: relative;
+    margin-left: 10px;
+    text-align: center;
+    transition: .2s linear;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
 }
 
-header ul li a{
+@media (max-width:767px) {
+    header .main-links > li {
+        padding: 10px;
+    } 
+}
+
+header .main-links > li:hover,
+header .main-links > li:hover a {
+    color: var(--decoration-color);
+}
+
+header .main-links > li::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #f7f7f7;
+    border-top: 3px solid var(--decoration-color);
+    transition: .2s linear;
+    z-index: -1;
+}
+
+header .main-links > li:hover::before {
+    width: 100%;
+}
+
+header .main-links > li a{
     text-decoration: none;
     color: #000;
 }
+
+/* -------------------- Start Mega menu ------------------------- */
+header .container .main-links .other-links {
+    width: 100%;
+    display: grid;
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 70px;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    padding: 20px 0;
+    gap: 30px;
+    transition: .3s;
+    border-bottom: 3px solid var(--decoration-color);
+    margin-top: 50px;
+}
+@media (max-width:991px) {
+    header .container .main-links .other-links {
+        grid-template-columns: repeat(auto-fill,minmax(350px,1fr)); 
+    }
+}
+header .container .main-links .other-links:hover {
+    visibility: visible;
+    top: 50px;
+}
+header .container .main-links li:last-of-type:hover + div.other-links {
+    visibility: visible;
+    top: 50px;
+}
+header .container .main-links .other-links  img {
+    max-width: 350px;
+}
+@media (max-width:991px) {
+    header .container .main-links .other-links  img {
+        display: none;
+    }
+}
+header .container .main-links .other-links  ul {
+    list-style: none;
+}
+header .container .main-links .other-links  ul li {
+    padding: 15px;
+    position: relative;
+}
+header .container .main-links .other-links  ul li::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #f7f7f7;
+    z-index: -1;
+    transition: .3s linear;
+}
+header .container .main-links .other-links  ul li:hover::before {
+    width: 100%;
+}
+header .container .main-links .other-links  ul li:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+}
+header .container .main-links .other-links  ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--decoration-color);
+}
+header .container .main-links .other-links  ul li a i {
+    margin-right: 10px;
+}
+/* -------------------- End Mega menu ------------------------- */
+
 /* End Header  */
