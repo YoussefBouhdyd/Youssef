@@ -5,7 +5,7 @@
     margin: 0;
 }
 body {
-    font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 /* End General Edits  */
 
@@ -13,6 +13,7 @@ body {
 :root {
     --decoration-color: #1A93FA;
     --main-transition-duration: .3s;
+    --main-background-color: #ECECEC;
 }
 /* End Variables */
 
@@ -44,8 +45,11 @@ body {
 
 /* Start Header  */
 header {
-    padding: 10px 0;
-    box-shadow: 0 0 10px #Ddd;;
+    box-shadow: 0 0 10px #Ddd;
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    z-index: 2;
 }
 
 header .container {
@@ -61,9 +65,13 @@ header .container {
 }
 
 header h1{
+    height: 74px;
     font-size: 30px;
     letter-spacing: .5px;
     color: var(--decoration-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 header .main-links{
@@ -72,7 +80,7 @@ header .main-links{
 
 header .main-links > li{
     padding: 0 30px; /* i remove the padding left and right and replace it with height */
-    height: 60px; /* this is better if you change the font later and in the same time conserve the height of the header*/
+    height: 74px; /* this is better if you change the font later and in the same time conserve the height of the header*/
     display: block;
     font-size: 18px;
     position: relative;
@@ -120,16 +128,18 @@ header .main-links > li a{
 /* -------------------- Start Mega menu ------------------------- */
 header .container .main-links .other-links {
     width: 100%;
+    background-color: #fff;
     display: grid;
     visibility: hidden;
     position: absolute;
     left: 0;
-    top: 140px;
+    top: 110%;
     grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
     padding: 20px 0;
     gap: 30px;
     transition: var(--main-transition-duration);
     border-bottom: 3px solid var(--decoration-color);
+    z-index: 1;
 }
 @media (max-width:991px) {
     header .container .main-links .other-links {
@@ -138,11 +148,11 @@ header .container .main-links .other-links {
 }
 header .container .main-links .other-links:hover {
     visibility: visible;
-    top: 120px;
+    top: 100%;
 }
 header .container .main-links li:last-of-type:hover + div.other-links {
     visibility: visible;
-    top: 120px;
+    top: 100%;
 }
 header .container .main-links .other-links  img {
     max-width: 350px;
@@ -187,3 +197,64 @@ header .container .main-links .other-links  ul li a i {
 /* -------------------- End Mega menu ------------------------- */
 
 /* End Header  */
+
+/* Start Landing */
+.landing {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.landing::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--main-background-color);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    z-index: -1;
+}
+.landing .to-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--decoration-color);
+    animation: UpDown 1s linear 0s infinite alternate;
+}
+@keyframes UpDown {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(10px);
+    }
+}
+.landing .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+.landing .container img {
+    width: 300px;
+    animation: UpDown 1s linear 0s infinite alternate;
+}
+@media (max-width:767px) {
+    .landing .container img {
+        display: none;
+    }
+}
+@media (max-width:767px) {
+    .landing .container .text {
+        text-align: center;
+    }
+}      
+.landing .container .text p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+/* End Landing */
