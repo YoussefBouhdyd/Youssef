@@ -1,0 +1,61 @@
+/* Start Header Section Components  */
+.header-section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+.header-section h1 {
+    width: fit-content;
+    margin: auto;
+    padding: 10px 30px;
+    border: 3px solid #000;
+    position: relative;
+    transition: calc(var(--main-transition-duration) + .3s) cubic-bezier(1, 0, 1, 1);
+}
+.header-section h1:hover {
+    color: #fff;
+    border: 3px solid var(--decoration-color);
+}
+.header-section h1::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    left: -35px;
+    bottom: 50%;
+    transform: translateY(50%);
+    background-color: var(--decoration-color);
+    transition: calc(var(--main-transition-duration) + .3s);
+    z-index: -1;
+}
+.header-section h1:hover::before {
+    height: 100%;
+    width: 50%;
+    border-radius: 0;
+    left: 0;
+    bottom: 0;
+    transform: translateY(0%);
+}
+.header-section h1::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    right: -35px;
+    bottom: 50%;
+    transform: translateY(50%);
+    background-color: var(--decoration-color);
+    transition: calc(var(--main-transition-duration) + .3s);
+    z-index: -1;
+}
+.header-section h1:hover::after {
+    height: 100%;
+    width: 51%;
+    border-radius: 0px;
+    right: 0;
+    bottom: 0;
+    transform: translateY(0%);
+}
+/* End Header Section Components  */
