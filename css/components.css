@@ -1,6 +1,5 @@
 /* Start Header Section Components  */
 .header-section {
-    margin-top: 100px;
     margin-bottom: 100px;
     text-align: center;
 }
@@ -10,6 +9,7 @@
     padding: 10px 30px;
     border: 3px solid #000;
     position: relative;
+    text-transform: uppercase;
 }
 .header-section h1:hover {
     color: #fff;
