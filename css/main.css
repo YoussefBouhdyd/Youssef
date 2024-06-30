@@ -66,7 +66,7 @@ header .container {
 }
 
 header h1{
-    height: 74px;
+    height: 60px;
     font-size: 30px;
     letter-spacing: .5px;
     color: var(--decoration-color);
@@ -81,7 +81,7 @@ header .main-links{
 
 header .main-links > li{
     padding: 0 30px; /* i remove the padding left and right and replace it with height */
-    height: 74px; /* this is better if you change the font later and in the same time conserve the height of the header*/
+    height: 60px; /* this is better if you change the font later and in the same time conserve the height of the header*/
     display: block;
     font-size: 18px;
     position: relative;
@@ -131,10 +131,11 @@ header .container .main-links .other-links {
     width: 100%;
     background-color: #fff;
     display: grid;
-    visibility: hidden;
     position: absolute;
     left: 0;
-    top: 110%;
+    visibility: hidden;
+    opacity: 0;
+    top: calc(100% + 50px);
     grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
     padding: 20px 0;
     gap: 30px;
@@ -149,14 +150,16 @@ header .container .main-links .other-links {
 }
 header .container .main-links .other-links:hover {
     visibility: visible;
-    top: 100%;
+    top: calc(100% + 1px);
+    opacity: 1;
 }
 header .container .main-links li:last-of-type:hover + div.other-links {
     visibility: visible;
-    top: 100%;
+    top: calc(100% + 1px);
+    opacity: 1;
 }
 header .container .main-links .other-links  img {
-    max-width: 350px;
+    max-width: 100%;
 }
 @media (max-width:991px) {
     header .container .main-links .other-links  img {
