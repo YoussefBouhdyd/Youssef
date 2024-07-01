@@ -10,6 +10,7 @@
     border: 3px solid #000;
     position: relative;
     text-transform: uppercase;
+    z-index: 100;
 }
 .header-section h1:hover {
     color: #fff;

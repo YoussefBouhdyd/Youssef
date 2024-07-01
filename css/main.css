@@ -19,6 +19,7 @@ html {
     --main-background-color: #ECECEC;
     --text-color: #777;
     --section-padding: 100px;
+    --fork-hight: 3%
 }
 /* End Variables */
 
@@ -336,3 +337,70 @@ header .container .main-links .other-links  ul li a i {
     }
 }
 /* End Articles */
+
+/* Start Gellery  */
+.gallery {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+}
+.gallery::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-background-color);
+    z-index: -1;
+    top: 0;
+    left: 0;
+    clip-path: polygon(0 0,1% var(--fork-hight),2% 0,3% var(--fork-hight),4% 0,5% var(--fork-hight),6% 0,7% var(--fork-hight),8% 0,9% var(--fork-hight),10% 0,11% var(--fork-hight),12% 0,13% var(--fork-hight),14% 0,15% var(--fork-hight),16% 0,17% var(--fork-hight),18% 0,19% var(--fork-hight),20% 0,21% var(--fork-hight),22% 0,23% var(--fork-hight),24% 0,25% var(--fork-hight),26% 0,27% var(--fork-hight),28% 0,29% var(--fork-hight),30% 0,31% var(--fork-hight),32% 0,33% var(--fork-hight),34% 0,35% var(--fork-hight),36% 0,37% var(--fork-hight),38% 0,39% var(--fork-hight),40% 0,41% var(--fork-hight),42% 0,43% var(--fork-hight),44% 0,45% var(--fork-hight),46% 0,47% var(--fork-hight),48% 0,49% var(--fork-hight),50% 0,51% var(--fork-hight),52% 0,53% var(--fork-hight),54% 0,55% var(--fork-hight),56% 0,57% var(--fork-hight),58% 0,59% var(--fork-hight),60% 0,61% var(--fork-hight),62% 0,63% var(--fork-hight),64% 0,65% var(--fork-hight),66% 0,67% var(--fork-hight),68% 0,69% var(--fork-hight),70% 0,71% var(--fork-hight),72% 0,73% var(--fork-hight),74% 0,75% var(--fork-hight),76% 0,77% var(--fork-hight),78% 0,79% var(--fork-hight),80% 0,81% var(--fork-hight),82% 0,83% var(--fork-hight),84% 0,85% var(--fork-hight),86% 0,87% var(--fork-hight),88% 0,89% var(--fork-hight),90% 0,91% var(--fork-hight),92% 0,93% var(--fork-hight),94% 0,95% var(--fork-hight),96% 0,97% var(--fork-hight),98% 0,99% var(--fork-hight),100% 0,100% 100%,0% 100%)
+}
+.gallery .gallery-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px;
+    justify-content: center;
+}
+.gallery .gallery-content .photo{
+    flex-basis: 350px;
+    border: 10px solid #fff;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 0px 10px 3px rgb(0 0 0 / 13%), 0px 0px 10px 3px rgb(0 0 0 / 12%);
+}
+.gallery .gallery-content .photo::before {
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #ffffff7e;
+    z-index: 1;
+    opacity: 0;
+}
+.gallery .gallery-content .photo:hover::before {
+    animation: opacity-pop calc(var(--main-transition-duration) * 2);
+}
+.gallery .gallery-content .photo img{
+    max-width: 100%;
+    transition: var(--main-transition-duration);
+    transform: scale(1.1);
+}
+.gallery .gallery-content .photo:hover img {
+    transform: scale(1.3) rotate(10deg);
+}
+@keyframes opacity-pop {
+    0%,50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        width: 200%;
+        height: 200%;
+    }
+}
+
+/* End Gellery  */
