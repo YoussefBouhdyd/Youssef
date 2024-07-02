@@ -415,3 +415,148 @@ header .container .main-links .other-links  ul li a i {
 }
 
 /* End Gellery  */
+
+/* Start Features */
+.features {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    column-gap: 30px;
+}
+.features .container .feature{
+    border: 1px solid var(--text-color);
+}
+.features .container .feature img{
+    max-width: 100%;
+}
+.features .container .feature .image{
+    position: relative;
+}
+.features .container .feature .image::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.features .container .feature .text {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+.features .container .feature .text::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background-color: #fff;
+    height: 150px;
+    transform: skewY(16deg);
+    width: 100%;
+    transition: var(--main-transition-duration);
+}
+.features .container .feature:hover .text::before {
+    transform: skewY(-16deg);
+}
+.features .container .feature h1{
+    width: fit-content;
+    border-bottom: 5px solid;
+    margin: 30px auto;
+    padding: 10px 0;
+}
+/* I. First Feature  */
+.features .container .feature:first-child{
+    --feature-color: #03A9F4;
+}
+.features .container .feature:first-child .image::after {
+    background-color: #03A9F450;
+}
+.features .container .feature:first-child h1 {
+    border-bottom: 5px solid var(--feature-color);
+}
+.features .container .feature:first-child a {
+    color: var(--feature-color);
+    border-color: var(--feature-color);
+}
+.features .container .feature:first-child a::before {
+    background-color: var(--feature-color);
+}
+/* I. End First Feature  */
+
+/* II. Second Feature  */
+.features .container .feature:nth-child(2){
+    --feature-color: #f44336;
+}
+.features .container .feature:nth-child(2) .image::after {
+    background-color: #f4433650;
+}
+.features .container .feature:nth-child(2) h1 {
+    border-bottom: 5px solid var(--feature-color);
+}
+.features .container .feature:nth-child(2) a {
+    color: var(--feature-color);
+    border-color: var(--feature-color);
+}
+.features .container .feature:nth-child(2) a::before {
+    background-color: var(--feature-color);
+}
+/* II. End Second Feature  */
+
+/* III. Third Feature  */
+.features .container .feature:last-child{
+    --feature-color: #4CAF50;
+}
+.features .container .feature:last-child .image::after {
+    background-color: #4CAF5050;
+}
+.features .container .feature:last-child h1 {
+    border-bottom: 5px solid var(--feature-color);
+}
+.features .container .feature:last-child a {
+    color: var(--feature-color);
+    border-color: var(--feature-color);
+}
+.features .container .feature:last-child a::before {
+    background-color: var(--feature-color);
+}
+/* III. End Third Feature  */
+
+.features .container .feature p{
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.8;
+    padding: 20px 0;
+}
+.features .container .feature a{
+    text-decoration: none;
+    font-weight: bold;
+    border: 3px solid;
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    border-radius: 4px;
+    position: relative;
+}
+.features .container .feature a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    z-index: -1;
+    transition: var(--main-transition-duration);
+}
+.features .container .feature a:hover {
+    color: #fff;
+}
+.features .container .feature a:hover::before {
+    width: 100%;
+}
+/* End Features */
