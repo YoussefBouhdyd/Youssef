@@ -19,7 +19,7 @@ html {
     --main-background-color: #ECECEC;
     --text-color: #777;
     --section-padding: 100px;
-    --fork-hight: 3%
+    --fork-hight: 2%
 }
 /* End Variables */
 
@@ -353,7 +353,18 @@ header .container .main-links .other-links  ul li a i {
     z-index: -1;
     top: 0;
     left: 0;
-    clip-path: polygon(0 0,1% var(--fork-hight),2% 0,3% var(--fork-hight),4% 0,5% var(--fork-hight),6% 0,7% var(--fork-hight),8% 0,9% var(--fork-hight),10% 0,11% var(--fork-hight),12% 0,13% var(--fork-hight),14% 0,15% var(--fork-hight),16% 0,17% var(--fork-hight),18% 0,19% var(--fork-hight),20% 0,21% var(--fork-hight),22% 0,23% var(--fork-hight),24% 0,25% var(--fork-hight),26% 0,27% var(--fork-hight),28% 0,29% var(--fork-hight),30% 0,31% var(--fork-hight),32% 0,33% var(--fork-hight),34% 0,35% var(--fork-hight),36% 0,37% var(--fork-hight),38% 0,39% var(--fork-hight),40% 0,41% var(--fork-hight),42% 0,43% var(--fork-hight),44% 0,45% var(--fork-hight),46% 0,47% var(--fork-hight),48% 0,49% var(--fork-hight),50% 0,51% var(--fork-hight),52% 0,53% var(--fork-hight),54% 0,55% var(--fork-hight),56% 0,57% var(--fork-hight),58% 0,59% var(--fork-hight),60% 0,61% var(--fork-hight),62% 0,63% var(--fork-hight),64% 0,65% var(--fork-hight),66% 0,67% var(--fork-hight),68% 0,69% var(--fork-hight),70% 0,71% var(--fork-hight),72% 0,73% var(--fork-hight),74% 0,75% var(--fork-hight),76% 0,77% var(--fork-hight),78% 0,79% var(--fork-hight),80% 0,81% var(--fork-hight),82% 0,83% var(--fork-hight),84% 0,85% var(--fork-hight),86% 0,87% var(--fork-hight),88% 0,89% var(--fork-hight),90% 0,91% var(--fork-hight),92% 0,93% var(--fork-hight),94% 0,95% var(--fork-hight),96% 0,97% var(--fork-hight),98% 0,99% var(--fork-hight),100% 0,100% 100%,0% 100%)
+    clip-path: polygon(0 0,1.25% var(--fork-hight),2.50% 0,3.75% var(--fork-hight),5.00% 0,6.25% var(--fork-hight),7.50% 0,8.75% var(--fork-hight),10.00% 0,11.25% var(--fork-hight),12.50% 0,13.75% var(--fork-hight),15.00% 0,16.25% var(--fork-hight),17.50% 0,18.75% var(--fork-hight),20.00% 0,21.25% var(--fork-hight),22.50% 0,23.75% var(--fork-hight),25.00% 0,26.25% var(--fork-hight),27.50% 0,28.75% var(--fork-hight),30.00% 0,31.25% var(--fork-hight),32.50% 0,33.75% var(--fork-hight),35.00% 0,36.25% var(--fork-hight),37.50% 0,38.75% var(--fork-hight),40.00% 0,41.25% var(--fork-hight),42.50% 0,43.75% var(--fork-hight),45.00% 0,46.25% var(--fork-hight),47.50% 0,48.75% var(--fork-hight),50.00% 0,51.25% var(--fork-hight),52.50% 0,53.75% var(--fork-hight),55.00% 0,56.25% var(--fork-hight),57.50% 0,58.75% var(--fork-hight),60.00% 0,61.25% var(--fork-hight),62.50% 0,63.75% var(--fork-hight),65.00% 0,66.25% var(--fork-hight),67.50% 0,68.75% var(--fork-hight),70.00% 0,71.25% var(--fork-hight),72.50% 0,73.75% var(--fork-hight),75.00% 0,76.25% var(--fork-hight),77.50% 0,78.75% var(--fork-hight),80.00% 0,81.25% var(--fork-hight),82.50% 0,83.75% var(--fork-hight),85.00% 0,86.25% var(--fork-hight),87.50% 0,88.75% var(--fork-hight),90.00% 0,91.25% var(--fork-hight),92.50% 0,93.75% var(--fork-hight),95.00% 0,96.25% var(--fork-hight),97.50% 0,98.75% var(--fork-hight),100.00% 0,100% 100%,0% 100%)
+}
+
+@media (max-width: 991px) {
+    .gallery::before {
+        clip-path: polygon(0 0,1.67% var(--fork-hight),3.33% 0,5.00% var(--fork-hight),6.67% 0,8.33% var(--fork-hight),10.00% 0,11.67% var(--fork-hight),13.33% 0,15.00% var(--fork-hight),16.67% 0,18.33% var(--fork-hight),20.00% 0,21.67% var(--fork-hight),23.33% 0,25.00% var(--fork-hight),26.67% 0,28.33% var(--fork-hight),30.00% 0,31.67% var(--fork-hight),33.33% 0,35.00% var(--fork-hight),36.67% 0,38.33% var(--fork-hight),40.00% 0,41.67% var(--fork-hight),43.33% 0,45.00% var(--fork-hight),46.67% 0,48.33% var(--fork-hight),50.00% 0,51.67% var(--fork-hight),53.33% 0,55.00% var(--fork-hight),56.67% 0,58.33% var(--fork-hight),60.00% 0,61.67% var(--fork-hight),63.33% 0,65.00% var(--fork-hight),66.67% 0,68.33% var(--fork-hight),70.00% 0,71.67% var(--fork-hight),73.33% 0,75.00% var(--fork-hight),76.67% 0,78.33% var(--fork-hight),80.00% 0,81.67% var(--fork-hight),83.33% 0,85.00% var(--fork-hight),86.67% 0,88.33% var(--fork-hight),90.00% 0,91.67% var(--fork-hight),93.33% 0,95.00% var(--fork-hight),96.67% 0,98.33% var(--fork-hight),100.00% 0,100% 100%,0% 100%)
+    }
+}
+@media (max-width:767px) {
+    .gallery::before {
+        clip-path: polygon(0 0,2% var(--fork-hight),5% 0,7% var(--fork-hight),10% 0,12% var(--fork-hight),15% 0,17% var(--fork-hight),20% 0,22% var(--fork-hight),25% 0,27% var(--fork-hight),30% 0,32% var(--fork-hight),35% 0,37% var(--fork-hight),40% 0,42% var(--fork-hight),45% 0,47% var(--fork-hight),50% 0,52% var(--fork-hight),55% 0,57% var(--fork-hight),60% 0,62% var(--fork-hight),65% 0,67% var(--fork-hight),70% 0,72% var(--fork-hight),75% 0,77% var(--fork-hight),80% 0,82% var(--fork-hight),85% 0,87% var(--fork-hight),90% 0,92% var(--fork-hight),95% 0,97% var(--fork-hight),100% 0,100% 100%,0% 100%)
+    }
 }
 .gallery .gallery-content {
     display: flex;
