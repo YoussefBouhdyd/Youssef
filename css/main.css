@@ -606,7 +606,7 @@ header .container .main-links .other-links  ul li a i {
     overflow: hidden;
     right: -25px;
     top: -30px;
-    border: 5px solid var(--main-background-color)
+    border: 10px solid var(--main-background-color)
 }
 .testimonials .container .testimonial .image img{
     max-width: 100%;
