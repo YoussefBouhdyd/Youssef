@@ -635,24 +635,27 @@ header .container .main-links .other-links  ul li a i {
     gap: 40px;
 }
 .team-member .container .box-member{
-    background-color: #F3F3F3;
+    background-image: linear-gradient(to left , #ECECEC 50% , #F3F3F3 50%);
+    background-size: 200%;
+    background-position: bottom left;
     border-radius: 8px;
     padding: 40px 10px 10px;
     transition: var(--main-transition-duration);
 }
 .team-member .container .box-member:hover {
-    filter: grayscale(1);
-}
-.team-member .container .box-member:hover::after {
-    width: 100%;
+    background-position: bottom right;
 }
 .team-member .container .box-member .head{
     display: flex;
+}
+.team-member .container .box-member:hover .head img {
+    filter: grayscale(1);
 }
 .team-member .container .box-member .head .image img{
     max-width: 100%;
     border-radius: 8px;
     transform: translateX(-30px);
+    transition: var(--main-transition-duration);
 }
 @media (max-width:767px) {
     .team-member .container .box-member .head .image img {
@@ -667,6 +670,12 @@ header .container .main-links .other-links  ul li a i {
 .team-member .container .box-member .head .social a{
     padding: 10px 0;
     color: #666;
+}
+.team-member .container .box-member .head .social i {
+    transition: var(--main-transition-duration);
+}
+.facebook {
+    color: blue;
 }
 .team-member .container .box-member .info h4{
     color: var(--decoration-color);
