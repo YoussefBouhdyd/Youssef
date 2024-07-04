@@ -963,3 +963,102 @@ header .container .main-links .other-links  ul li a i {
     color: var(--text-color);
 }
 /* End Work  */
+
+/* Start event  */
+.event {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.event .container .event-content {
+    display: flex;
+    align-items: center;
+}
+@media (max-width:991px) {
+    .event .container .event-content {
+        flex-direction: column;
+    }
+}
+.event .container .event-content img {
+    max-width: 100%;
+}
+.event .container .event-content .description .date {
+    display: flex;
+    text-align: center;
+    gap: 10px;
+    justify-content: center;
+}
+.event .container .event-content .description .date .time{
+    border: 1px solid;
+    border-radius: 6px;
+}
+.event .container .event-content .description .date .time span {
+    display: block;
+}
+.event .container .event-content .description .date .time span:first-child{
+    font-size: 40px;
+    color: var(--decoration-color);
+    padding: 20px 10px;
+}
+.event .container .event-content .description .date .time span:last-child{
+    border-top: 1px solid;
+    width: 80px;
+    padding: 10px 0;
+}
+.event .container .event-content .description .text {
+    text-align: center;
+}
+.event .container .event-content .description .text h1{
+    font-size: 40px;
+}
+.event .container .event-content .description .text p{
+    line-height: 2;
+    color: var(--text-color);
+}
+.event .container form {
+    background-color: #F7F5F6;
+    width: fit-content;
+    margin: 100px auto 0;
+    padding: 40px 50px;
+    border-radius: 70px;
+    display: flex;
+}
+@media (max-width:767px) {
+    .event .container form {
+        flex-direction: column;
+        border-radius: 0px;
+    }
+}
+.event .container form  input[type ="email"]{
+    padding: 30px;
+    border: none;
+    border-radius: 50px;
+    width: 500px;
+    outline: none;
+}
+@media (max-width:767px) {
+    .event .container form  input[type ="email"] {
+        width: auto;
+        border-radius: 0px;
+    }
+}
+.event .container form  input[type ="email"]::placeholder {
+    text-transform: capitalize;
+    color: var(--text-color);
+}
+.event .container form  input[type ="submit"]{
+    border: none;
+    background-color: var(--decoration-color);
+    color: #fff;
+    padding: 20px 20px;
+    border-radius: 50px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+@media (max-width:767px) {
+    .event .container form  input[type ="submit"] {
+        margin-left: 0;
+        margin-top: 10px;
+        border-radius: 0px;
+    }
+}
+/* End event  */
