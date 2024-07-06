@@ -1089,20 +1089,33 @@ header .container .main-links .other-links  ul li a i {
 .pricing .container .plan{
     background-color: #fff;
     padding: 25px 0px;
+    box-shadow: 0px 0px 10px #aaa;
+    position: relative;
+    z-index: 1;
 }
 .pricing .container .plan:nth-child(2) {
     transform: translateY(-20px);
-    position: relative;
+}
+@media (max-width:767px) {
+    .pricing .container .plan:nth-child(2) {
+        transform: translateY(0px);
+    }
 }
 .pricing .container .plan:nth-child(2)::before {
     content: "Most Popular";
     position: absolute;
-    width: 30px;
-    height: 140px;
+    width: 140px;
+    height: 30px;
     background: var(--decoration-color);
-    right: 25px;
-    top: 0;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 90%, 0 100%);
+    right: -25px;
+    top: 60px;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    transform: rotate(90deg);
+    color: #fff;
+    font-weight: bold;
+    clip-path: polygon(0 0, 100% 0, 80% 50%, 100% 100%, 0 100%);
 
 }
 .pricing .container .plan h2{
@@ -1144,9 +1157,27 @@ header .container .main-links .other-links  ul li a i {
     padding: 10px 20px;
     text-decoration: none;
     color: var(--decoration-color);
+    transition: var(--main-transition-duration);
     font-weight: bold;
     border: 2px solid;
     border-radius: 8px;
+    position: relative;
 }
-
+.pricing .container .plan a:hover {
+    color: #fff;
+}
+.pricing .container .plan a::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: var(--decoration-color);
+    left: 0%;
+    top: 0%;
+    z-index: -1;
+    transition: var(--main-transition-duration);
+}
+.pricing .container .plan a:hover::before {
+    width: 100%;
+}
 /* End Pricing  */
