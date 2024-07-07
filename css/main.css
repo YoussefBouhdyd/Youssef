@@ -15,6 +15,7 @@ html {
 /* Start Variables */
 :root {
     --decoration-color: #1A93FA;
+    --second-color: #0887f6;
     --main-transition-duration: .3s;
     --main-background-color: #ECECEC;
     --text-color: #777;
@@ -979,7 +980,8 @@ header .container .main-links .other-links  ul li a i {
     }
 }
 .event .container .event-content img {
-    max-width: 100%;
+    width: 100%;
+    max-width: 450px;
 }
 .event .container .event-content .description .date {
     display: flex;
@@ -1034,6 +1036,7 @@ header .container .main-links .other-links  ul li a i {
     border-radius: 50px;
     width: 500px;
     outline: none;
+    caret-color: var(--decoration-color);    caret-shape: underscore;
 }
 @media (max-width:767px) {
     .event .container form  input[type ="email"] {
@@ -1044,6 +1047,10 @@ header .container .main-links .other-links  ul li a i {
 .event .container form  input[type ="email"]::placeholder {
     text-transform: capitalize;
     color: var(--text-color);
+    transition: var(--main-transition-duration);
+}
+.event .container form  input[type ="email"]:focus::placeholder {
+    opacity: 0;
 }
 .event .container form  input[type ="submit"]{
     border: none;
@@ -1053,6 +1060,11 @@ header .container .main-links .other-links  ul li a i {
     border-radius: 40px;
     margin-left: 20px;
     font-weight: bold;
+    cursor: pointer;
+    transition: var(--main-transition-duration);
+}
+.event .container form  input[type ="submit"]:hover {
+    background-color: var(--second-color);
 }
 @media (max-width:767px) {
     .event .container form  input[type ="submit"] {
