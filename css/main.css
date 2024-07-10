@@ -1308,3 +1308,61 @@ header .container .main-links .other-links  ul li a i {
     }
 }
 /* End Top Videos  */
+
+/* Starts Stats  */
+.stats {
+    padding-top: calc(var(--section-padding) - 50px);
+    padding-bottom: calc(var(--section-padding) - 50px);
+    background-color: var(--main-background-color);
+    position: relative;
+}
+.stats::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(../image/stats.jpg);
+    opacity: .05;
+}
+.stats .container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+@media (max-width:767px) {
+    .stats .container {
+        flex-direction: column;
+    }
+}
+.stats .stats-title{
+    margin-bottom: 100px;
+    text-align: center;
+    position: relative;
+}
+.stats .stats-title h1 {
+    width: fit-content;
+    margin: auto;
+    padding: 10px 30px;
+    text-transform: capitalize;
+}
+.stats .container .stat{
+    background-color: #fff;
+    padding: 20px 50px;
+    text-align: center;
+    flex: 1;
+}
+.stats .container .stat i{
+    font-size: 30px;
+}
+.stats .container .stat h1{
+    font-size: 40px;
+}
+.stats .container .stat p{
+    color: var(--decoration-color);
+    text-transform: capitalize;
+    font-size: 15px;
+}
+/* End Stats  */
