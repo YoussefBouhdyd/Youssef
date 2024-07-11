@@ -1364,7 +1364,7 @@ header .container .main-links .other-links  ul li a i {
     height: 0;
     width: 3px;
     background-color: var(--decoration-color);
-    transition: var(--main-transition-duration);
+    transition:1s;
 }
 .stats .container .stat::before {
     content: "";
@@ -1374,7 +1374,7 @@ header .container .main-links .other-links  ul li a i {
     height: 0;
     width: 3px;
     background-color: var(--decoration-color);
-    transition: var(--main-transition-duration);
+    transition:1s;
 }
 .stats .container .stat:hover {
     opacity: 1;
