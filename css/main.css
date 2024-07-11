@@ -1349,10 +1349,39 @@ header .container .main-links .other-links  ul li a i {
     text-transform: capitalize;
 }
 .stats .container .stat{
+    position: relative;
     background-color: #fff;
     padding: 20px 50px;
     text-align: center;
     flex: 1;
+    opacity: .8;
+}
+.stats .container .stat::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 0;
+    width: 3px;
+    background-color: var(--decoration-color);
+    transition: var(--main-transition-duration);
+}
+.stats .container .stat::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    height: 0;
+    width: 3px;
+    background-color: var(--decoration-color);
+    transition: var(--main-transition-duration);
+}
+.stats .container .stat:hover {
+    opacity: 1;
+}
+.stats .container .stat:hover::before, 
+.stats .container .stat:hover::after {
+    height: 100%;
 }
 .stats .container .stat i{
     font-size: 30px;
