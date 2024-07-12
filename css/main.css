@@ -1505,5 +1505,6 @@ header .container .main-links .other-links  ul li a i {
     color: #fff;
     font-weight: bold;
     cursor: pointer;
+    outline: none;
 }
 /* End Discount  */
