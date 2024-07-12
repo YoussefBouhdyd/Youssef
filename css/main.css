@@ -1392,6 +1392,118 @@ header .container .main-links .other-links  ul li a i {
 .stats .container .stat p{
     color: var(--decoration-color);
     text-transform: capitalize;
-    font-size: 15px;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
 }
 /* End Stats  */
+
+/* Start Discount  */
+.discount {
+    display: flex;
+}
+@media (max-width:767px) {
+    .discount {
+        flex-direction: column;
+    }
+}
+.discount .info{
+    flex-basis: 50%;
+    text-align: center;
+    background-color: rgb(8 135 246 / 95%);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+}
+.discount .info::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+    animation: change-image 5s linear infinite alternate;
+}
+@keyframes change-image {
+    0% {
+        background-image: url(../image/discount-background1.jpg);
+    }
+    100% {
+        background-image: url(../image/discount-background2.jpg);
+    }
+}
+.discount .info h1{
+    text-transform: capitalize;
+    font-size: 30px;
+}
+.discount .info p {
+    font-size: 15px;
+    margin: 30px;
+    line-height: 1.8;
+    width: 500px;
+    max-width: 100%;
+}
+.discount .info img {
+    width: 250px;
+    max-width: 100%;
+}
+.discount .form-fill {
+    flex-basis: 50%;
+    padding: 50px 20px;
+}
+.discount .form-fill h1 {
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    font-size: 35px;
+    text-align: center;
+
+}
+.discount .form-fill form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.discount .form-fill form input,
+.discount .form-fill form textarea {
+    width: 400px;
+    max-width: 100%;
+}
+.discount .form-fill form input:not([type = "submit"]),
+.discount .form-fill form textarea {
+    background-color: #f7f7f7;
+    border: none;
+    display: block;
+    padding: 20px 15px;
+    border-bottom: 2px solid #ddd;
+    outline: none;
+}
+.discount .form-fill form input:not([type = "submit"])::placeholder,
+.discount .form-fill form textarea::placeholder {
+    color: var(--text-color);
+    text-transform: capitalize;
+    transition: var(--main-transition-duration);
+}
+.discount .form-fill form input:not([type = "submit"]):focus::placeholder,
+.discount .form-fill form textarea:focus::placeholder {
+    opacity: 0;
+}
+.discount .form-fill form textarea{
+    height: 250px;
+}
+.discount .form-fill form input[type = "submit"]{
+    border: none;
+    background-color: var(--decoration-color);
+    padding: 15px;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* End Discount  */
