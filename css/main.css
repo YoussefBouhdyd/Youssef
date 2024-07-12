@@ -340,12 +340,12 @@ header .container .main-links .other-links  ul li a i {
 /* End Articles */
 
 /* Start Gellery  */
-.gallery {
+body > .gallery {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
     position: relative;
 }
-.gallery::before {
+body > .gallery::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -358,12 +358,12 @@ header .container .main-links .other-links  ul li a i {
 }
 
 @media (max-width: 991px) {
-    .gallery::before {
+    body > .gallery::before {
         clip-path: polygon(0 0,1.67% var(--fork-hight),3.33% 0,5.00% var(--fork-hight),6.67% 0,8.33% var(--fork-hight),10.00% 0,11.67% var(--fork-hight),13.33% 0,15.00% var(--fork-hight),16.67% 0,18.33% var(--fork-hight),20.00% 0,21.67% var(--fork-hight),23.33% 0,25.00% var(--fork-hight),26.67% 0,28.33% var(--fork-hight),30.00% 0,31.67% var(--fork-hight),33.33% 0,35.00% var(--fork-hight),36.67% 0,38.33% var(--fork-hight),40.00% 0,41.67% var(--fork-hight),43.33% 0,45.00% var(--fork-hight),46.67% 0,48.33% var(--fork-hight),50.00% 0,51.67% var(--fork-hight),53.33% 0,55.00% var(--fork-hight),56.67% 0,58.33% var(--fork-hight),60.00% 0,61.67% var(--fork-hight),63.33% 0,65.00% var(--fork-hight),66.67% 0,68.33% var(--fork-hight),70.00% 0,71.67% var(--fork-hight),73.33% 0,75.00% var(--fork-hight),76.67% 0,78.33% var(--fork-hight),80.00% 0,81.67% var(--fork-hight),83.33% 0,85.00% var(--fork-hight),86.67% 0,88.33% var(--fork-hight),90.00% 0,91.67% var(--fork-hight),93.33% 0,95.00% var(--fork-hight),96.67% 0,98.33% var(--fork-hight),100.00% 0,100% 100%,0% 100%)
     }
 }
 @media (max-width:767px) {
-    .gallery::before {
+    body >  .gallery::before {
         clip-path: polygon(0 0,2% var(--fork-hight),5% 0,7% var(--fork-hight),10% 0,12% var(--fork-hight),15% 0,17% var(--fork-hight),20% 0,22% var(--fork-hight),25% 0,27% var(--fork-hight),30% 0,32% var(--fork-hight),35% 0,37% var(--fork-hight),40% 0,42% var(--fork-hight),45% 0,47% var(--fork-hight),50% 0,52% var(--fork-hight),55% 0,57% var(--fork-hight),60% 0,62% var(--fork-hight),65% 0,67% var(--fork-hight),70% 0,72% var(--fork-hight),75% 0,77% var(--fork-hight),80% 0,82% var(--fork-hight),85% 0,87% var(--fork-hight),90% 0,92% var(--fork-hight),95% 0,97% var(--fork-hight),100% 0,100% 100%,0% 100%)
     }
 }
@@ -1508,3 +1508,95 @@ header .container .main-links .other-links  ul li a i {
     outline: none;
 }
 /* End Discount  */
+
+/* Start Footer  */
+footer {
+    background-color: #191919;
+    color: #BCB8B7;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+footer .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+}
+    /*----------------------- Start about column ----------------------- */
+footer .container .about h1{
+    color: #fff;
+    font-size: 40px;
+    letter-spacing: -2px;
+    margin: 0;
+}
+footer .container .about .social {
+    display: flex;
+    gap: 10px;
+    margin: 25px 0;
+
+}
+footer .container .about a{
+    background-color: #313131;
+    color: #BCB8B7;
+    text-decoration: none;
+    width: 60px;
+    height: 60px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .container .about p{
+    line-height: 1.7;
+}
+    /*--------------------- End about column ------------------------------- */
+
+    /*------------------------ Start Important link column ------------------ */ 
+footer .container .important-link a{
+    display: block;
+    text-decoration: none;
+    color: #BCB8B7;
+    padding: 15px 0;
+    font-size: 17px;
+}
+footer .container .important-link a:not(:last-child){
+    border-bottom: 2px solid #313131;
+}
+footer .container .important-link a i{
+    color: var(--decoration-color);
+    padding: 0 10px 0 0;
+    font-size: 15px;
+}
+    /*------------------------ End Important link column ------------------ */  
+
+    /*------------------------ Start direct-contact column ------------------ */
+footer .container .direct-contact .method {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+footer .container .direct-contact .method i {
+    font-size: 30px;
+    color: var(--decoration-color);
+    padding: 0 20px 0 0;
+}
+footer .container .direct-contact .method p,
+footer .container .direct-contact .method .phones {
+    line-height: 1.8;
+}
+footer .container .direct-contact .method .phones a {
+    text-decoration: none;
+    color: inherit;
+}
+    /*------------------------- End direct-contact column ---------------------- */
+
+    /*------------------------- Start gallery column ---------------------- */
+footer .gallery .gallery-content {
+    gap: 5px;
+}
+footer .gallery .gallery-content .photo  {
+    flex-basis: 80px;
+    border: 3px solid #fff;
+}
+    /*------------------------- End gallery column ---------------------- */
+/* End Footer  */
