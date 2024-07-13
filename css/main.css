@@ -1527,7 +1527,6 @@ footer {
     background-color: #191919;
     color: #BCB8B7;
     padding-top: var(--section-padding);
-    padding-bottom: var(--section-padding);
 }
 footer .container{
     display: grid;
@@ -1570,6 +1569,10 @@ footer .container .important-link a{
     color: #BCB8B7;
     padding: 15px 0;
     font-size: 17px;
+    transition: var(--main-transition-duration);
+}
+footer .container .important-link a:hover {
+    padding-left: 10px;
 }
 footer .container .important-link a:not(:last-child){
     border-bottom: 2px solid #313131;
@@ -1612,4 +1615,11 @@ footer .gallery .gallery-content .photo  {
     border: 3px solid #fff;
 }
     /*------------------------- End gallery column ---------------------- */
+footer .copyright {
+    text-align: center;
+    padding: 25px;
+    border-top: 2px solid #313131;
+    margin-top: 30px;
+    font-weight: bold;
+}
 /* End Footer  */
