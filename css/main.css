@@ -1407,6 +1407,13 @@ body > .gallery::before {
         flex-direction: column;
     }
 }
+@media (min-width:768px) {
+    .discount .info,
+    .discount .form-fill {
+        max-width: 50% ;
+    }
+
+}
 .discount .info{
     flex-basis: 50%;
     text-align: center;
@@ -1440,7 +1447,8 @@ body > .gallery::before {
 }
 .discount .info h1{
     text-transform: capitalize;
-    font-size: 30px;
+    font-size: 35px;
+    letter-spacing: -2px;
 }
 .discount .info p {
     font-size: 15px;
@@ -1462,7 +1470,7 @@ body > .gallery::before {
     text-transform: capitalize;
     font-size: 35px;
     text-align: center;
-
+    letter-spacing: -2px;
 }
 .discount .form-fill form {
     display: flex;
@@ -1496,6 +1504,7 @@ body > .gallery::before {
 }
 .discount .form-fill form textarea{
     height: 250px;
+    resize: none;
 }
 .discount .form-fill form input[type = "submit"]{
     border: none;
@@ -1506,6 +1515,10 @@ body > .gallery::before {
     font-weight: bold;
     cursor: pointer;
     outline: none;
+    transition: var(--main-transition-duration);
+}
+.discount .form-fill form input[type = "submit"]:hover {
+    background-color: var(--second-color);
 }
 /* End Discount  */
 
